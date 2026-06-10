@@ -24,7 +24,7 @@ library(gt)
 library(here)
 
 # reading in data
-est_data <- read_csv(here("data", "nest_data_final.csv"))
+nests <- read_csv(here("data", "nest_data_final.csv"))
 ```
 
 # Problem 1. Research writing
@@ -44,6 +44,12 @@ For part 2, American Avocets, Forster's Terns, and Black-necked Stilts used habi
 ## c. 
 
 One additional variable that could influence the probability of American Avocet microhabitat use is water depth (cm), which could be measured at each bird observation location using a meter stick or depth gauge. Water depth likely influences habitat use because American Avocets are wading birds that feed in shallow water, and the paper found that they were commonly associated with wet bare ground and shorelines where water is typically shallower.
+
+## d. 
+
+# Problem 2. Data analysis
+
+## a.
 
 
 
