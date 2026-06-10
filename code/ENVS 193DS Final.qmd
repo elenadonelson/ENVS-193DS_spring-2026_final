@@ -99,7 +99,12 @@ In this data set, a value of 1 indicates that a bird nest was present in the tre
 
 **Acacia ant species:** Acacia ant species is a categorical variable with three levels: *Crematogaster sjostedti*, *Crematogaster mimosae*, and *Crematogaster nigriceps*. Different ant species may influence nest occurrence because they vary in their behavior and aggressiveness, which could make some trees more attractive or safer for nesting birds than others. I found this information in the Introduction section where the authors describe how species interactions can affect bird nesting behavior.
 
+## d.
 
+| Model Number | Predictors | Interaction Term? | Model Description |
+|--------------|------------|------------------|------------------|
+| Model 1 | Tree height, ant species | No | Tests whether tree height and ant species influence the probability of nest occurrence. |
+| Model 2 | Tree height, ant species | Yes | Tests whether the effect of tree height on nest occurrence differs among ant species.
 
 
 
