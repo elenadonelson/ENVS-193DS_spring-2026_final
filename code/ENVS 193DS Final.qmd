@@ -124,5 +124,16 @@ model_2 <- glm(
 )
 ```
 
+## f. 
+
+```{r}
+# comparing models using AIC
+AIC(model_1, model_2)
+```
+
+The best model as determined by Akaike’s Information Criterion (AIC) included tree height and acacia ant species as predictors of nest occurrence. Including an interaction between tree height and acacia ant species did not improve the model, so the simpler model was selected.
+
+
+
 
 
