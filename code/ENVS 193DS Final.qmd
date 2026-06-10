@@ -294,8 +294,9 @@ prediction_600 <- prediction_600 %>%
 prediction_600
 ```
 
+## k.
 
-
+Figure 1 shows that the probability of nest occurrence generally increased with tree height for *C. mimosae* and *C. nigriceps*, but remained very low for *C. sjostedti*. At a tree height of 600 cm, the predicted probability of nest occurrence was 0.356 for *C. mimosae*, 0.735 for *C. nigriceps*, and essentially 0 for *C. sjostedti*. These results suggest that both tree height and acacia ant species influence the probability of bird nest occurrence. One possible explanation is that birds may prefer nesting in trees occupied by less aggressive ant species, while avoiding trees occupied by more aggressive ants that could disturb nests.
 
 
 
