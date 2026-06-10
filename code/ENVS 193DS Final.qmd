@@ -106,8 +106,23 @@ In this data set, a value of 1 indicates that a bird nest was present in the tre
 | Model 1 | Tree height, ant species | No | Tests whether tree height and ant species influence the probability of nest occurrence. |
 | Model 2 | Tree height, ant species | Yes | Tests whether the effect of tree height on nest occurrence differs among ant species.
 
+## e.
 
+```{r}
+# model 1: no interaction
+model_1 <- glm(
+  case_control ~ height_cm + ant_species_full,
+  data = nests_clean,
+  family = "binomial"
+)
 
+# model 2: interaction model
+model_2 <- glm(
+  case_control ~ height_cm * ant_species_full,
+  data = nests_clean,
+  family = "binomial"
+)
+```
 
 
 
