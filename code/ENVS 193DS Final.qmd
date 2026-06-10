@@ -298,7 +298,25 @@ prediction_600
 
 Figure 1 shows that the probability of nest occurrence generally increased with tree height for *C. mimosae* and *C. nigriceps*, but remained very low for *C. sjostedti*. At a tree height of 600 cm, the predicted probability of nest occurrence was 0.356 for *C. mimosae*, 0.735 for *C. nigriceps*, and essentially 0 for *C. sjostedti*. These results suggest that both tree height and acacia ant species influence the probability of bird nest occurrence. One possible explanation is that birds may prefer nesting in trees occupied by less aggressive ant species, while avoiding trees occupied by more aggressive ants that could disturb nests.
 
+# Problem 3. Affective and exploratory visualizations
 
+## a.
+
+*How are the visualizations different from each other in the way you have represented your data?*
+
+My exploratory visualizations from Homework 2 used standard graphs in R to show relationships between variables using points and axes. In contrast, my affective visualization represents the data as a garden, where flower height represents hours slept, flowers represent whether I exercised, roots represent schoolwork hours, and leaves represent cups of coffee. This makes the data feel more personal and visually engaging than a traditional graph.
+
+*What similarities do you see between all your visualizations?*
+
+All of my visualizations are based on the same personal data that I collected about sleep, coffee consumption, exercise, and schoolwork. They all help communicate patterns in my daily habits, but they do so in different ways. Even though the affective visualization is more artistic, it still represents the same variables shown in my exploratory graphs.
+
+*What patterns do you see in each visualization? Are these different between visualizations? If so, why? If not, why not?*
+
+In my Homework 2 scatterplot, I found a weak negative relationship between sleep and coffee consumption, meaning I generally drank more coffee when I slept less. My exercise visualization showed no clear relationship between exercise and sleep. The affective visualization shows similar patterns, but instead of focusing on statistical relationships, it emphasizes how different parts of my daily routine contribute to my overall energy and well-being.
+
+*What kinds of feedback did you get during week 9 in workshop or from the instructors? How did you implement or try those suggestions?*
+
+I received feedback from peers that my visualization was creative but could be improved by making the symbols easier to interpret. I added a clearer key and made the different parts of the flowers represent specific variables more consistently. These changes helped make the visualization easier to understand while still keeping the artistic style that I wanted.
 
 
 
