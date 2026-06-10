@@ -318,5 +318,8 @@ In my Homework 2 scatterplot, I found a weak negative relationship between sleep
 
 I received feedback from peers that my visualization was creative but could be improved by making the symbols easier to interpret. I added a clearer key and made the different parts of the flowers represent specific variables more consistently. These changes helped make the visualization easier to understand while still keeping the artistic style that I wanted.
 
+## b.
+
+One analysis I could use is a simple linear regression. My research question focuses on whether the amount of sleep I get influences how much coffee I drink, so a linear regression would help test whether there is a relationship between these two variables. This analysis is appropriate because hours slept is a continuous predictor variable measured in hours, and coffee consumption is a continuous response variable measured in cups per day.
 
 
