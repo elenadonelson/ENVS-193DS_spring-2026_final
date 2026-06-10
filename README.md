@@ -13,4 +13,4 @@ The `data` folder contains the dataset(s) used for the final project.
 
 ## Rendered output
 
-The rendered PDF can be viewed here:
+The rendered PDF can be viewed here: https://github.com/elenadonelson/ENVS-193DS_spring-2026_final/blob/main/code/ENVS-193DS-Final.pdf
