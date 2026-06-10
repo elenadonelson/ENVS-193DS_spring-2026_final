@@ -22,6 +22,7 @@ library(tidyverse)
 library(janitor)
 library(gt)
 library(here)
+library(DHARMa)
 
 # reading in data
 nests <- read_csv(here("data", "nest_data_final.csv"))
@@ -132,6 +133,35 @@ AIC(model_1, model_2)
 ```
 
 The best model as determined by Akaike’s Information Criterion (AIC) included tree height and acacia ant species as predictors of nest occurrence. Including an interaction between tree height and acacia ant species did not improve the model, so the simpler model was selected.
+
+## g. 
+
+```{r}
+# creating simulated residuals for the selected logistic regression model
+model_1_residuals <- simulateResiduals(
+  fittedModel = model_1
+)
+
+# plotting diagnostic results
+plot(model_1_residuals)
+
+# testing for uniformity of residuals
+testUniformity(model_1_residuals)
+
+# testing for dispersion
+testDispersion(model_1_residuals)
+
+# testing for outliers
+testOutliers(model_1_residuals)
+
+```
+
+The DHARMa diagnostic plots and tests did not show any major issues with the model. The residuals looked fairly even, and there was no evidence of overdispersion or outliers, suggesting that the model fit the data well.
+
+
+
+
+
 
 
 
