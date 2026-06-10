@@ -359,7 +359,43 @@ summary(coffee_lm)$r.squared
 
 The effect size (R²) was 0.748. This means that about 74.8% of the variation in coffee consumption can be explained by the number of hours slept, indicating a strong relationship between these variables.
 
+## d.
 
+```{r}
+# creating a visualization of the linear regression model
+ggplot(
+  coffee_data,
+  aes(
+    x = hours_slept,
+    y = coffee_cups
+  )
+) +
+  
+  # showing the underlying data
+  geom_point(
+    color = "darkgreen",
+    size = 3,
+    alpha = 0.7
+  ) +
+  
+  # adding model prediction line with 95% confidence interval
+  geom_smooth(
+    method = "lm",
+    se = TRUE,
+    color = "darkorange",
+    fill = "tan"
+  ) +
+  
+  # changing the theme
+  theme_classic() +
+  
+  # labeling the plot and axes
+  labs(
+    title = "Relationship between sleep and coffee consumption",
+    x = "Amount of sleep (hours)",
+    y = "Coffee consumed (cups)"
+  )
+```
 
 
 
