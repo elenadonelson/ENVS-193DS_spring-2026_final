@@ -35,6 +35,11 @@ In part 1, they likely used a logistic regression because they were testing whet
 
 In part 2, they likely used a chi-square test of independence because they were testing whether there is a relationship between bird species and habitat type, which are both categorical variables.
 
+## b.
+
+For part 1, the probability of American Avocet microhabitat use changed with distance from the water edge, suggesting that distance to water may influence where American Avocets choose to use habitat.
+
+For part 2, American Avocets, Forster's Terns, and Black-necked Stilts used habitats differently, suggesting that each species may have different habitat preferences within the San Francisco Bay.
 
 
 
