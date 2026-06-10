@@ -397,7 +397,9 @@ ggplot(
   )
 ```
 
+## e.
 
+**Figure 2. Relationship between sleep and coffee consumption.** Green points represent individual daily observations of hours slept and cups of coffee consumed. The orange line represents the predicted relationship from a simple linear regression model, while the shaded tan area represents the 95% confidence interval around the prediction. The figure shows a negative relationship between sleep and coffee consumption, with coffee intake generally decreasing as hours of sleep increase. Data source: Personal dataset collected by Elena Donelson from 2026-04-17 to 2026-05-23.
 
 
 
