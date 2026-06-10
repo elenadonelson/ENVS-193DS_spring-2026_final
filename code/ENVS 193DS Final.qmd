@@ -401,6 +401,9 @@ ggplot(
 
 **Figure 2. Relationship between sleep and coffee consumption.** Green points represent individual daily observations of hours slept and cups of coffee consumed. The orange line represents the predicted relationship from a simple linear regression model, while the shaded tan area represents the 95% confidence interval around the prediction. The figure shows a negative relationship between sleep and coffee consumption, with coffee intake generally decreasing as hours of sleep increase. Data source: Personal dataset collected by Elena Donelson from 2026-04-17 to 2026-05-23.
 
+## f.
+
+I found a significant negative relationship between hours slept and coffee consumption. As the amount of sleep increased, the number of cups of coffee consumed generally decreased (F(1, 34) = 101.2, p < 0.001, R² = 0.748). This relationship was fairly strong, with hours slept explaining about 74.8% of the variation in coffee consumption. Figure 2 shows this trend, with higher coffee consumption generally occurring on days when I got less sleep.
 
 
 
