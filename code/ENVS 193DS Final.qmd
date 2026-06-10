@@ -158,8 +158,110 @@ testOutliers(model_1_residuals)
 
 The DHARMa diagnostic plots and tests did not show any major issues with the model. The residuals looked fairly even, and there was no evidence of overdispersion or outliers, suggesting that the model fit the data well.
 
+## h.
 
+```{r}
+# creating prediction data for the selected model
+prediction_data <- expand_grid(
+  height_cm = seq(
+    min(nests_clean$height_cm, na.rm = TRUE),
+    max(nests_clean$height_cm, na.rm = TRUE),
+    length.out = 100
+  ),
+  ant_species_full = levels(nests_clean$ant_species_full)
+)
 
+# getting model predictions on the logit scale
+model_predictions <- predict(
+  model_1,
+  newdata = prediction_data,
+  type = "link",
+  se.fit = TRUE
+)
+
+# adding predicted probabilities and 95% confidence intervals
+prediction_data <- prediction_data %>%
+  mutate(
+    fit = model_predictions$fit,
+    se = model_predictions$se.fit,
+    probability = plogis(fit),
+    lower_ci = plogis(fit - 1.96 * se),
+    upper_ci = plogis(fit + 1.96 * se)
+  )
+
+# plotting model predictions with 95% confidence intervals and raw data
+ggplot() +
+  
+  # plotting the underlying data
+  geom_jitter(
+    data = nests_clean,
+    aes(
+      x = height_cm,
+      y = case_control,
+      color = ant_species_full
+    ),
+    height = 0.05,
+    width = 0,
+    alpha = 0.4
+  ) +
+  
+  # adding 95% confidence intervals
+  geom_ribbon(
+    data = prediction_data,
+    aes(
+      x = height_cm,
+      ymin = lower_ci,
+      ymax = upper_ci,
+      fill = ant_species_full
+    ),
+    alpha = 0.25
+  ) +
+  
+  # adding model prediction lines
+  geom_line(
+    data = prediction_data,
+    aes(
+      x = height_cm,
+      y = probability,
+      color = ant_species_full
+    ),
+    linewidth = 1
+  ) +
+  
+  # using non-default colors
+  scale_color_manual(
+    values = c(
+      "C. sjostedti" = "darkgreen",
+      "C. mimosae" = "steelblue",
+      "C. nigriceps" = "darkorange"
+    )
+  ) +
+  scale_fill_manual(
+    values = c(
+      "C. sjostedti" = "darkgreen",
+      "C. mimosae" = "steelblue",
+      "C. nigriceps" = "darkorange"
+    )
+  ) +
+  
+  # putting each ant species in a separate panel
+  facet_wrap(~ ant_species_full) +
+  
+  # labeling axes and title
+  labs(
+    title = "Predicted probability of nest occurrence by tree height and acacia ant species",
+    x = "Tree height (cm)",
+    y = "Predicted probability of nest occurrence"
+  ) +
+  
+  # removing grey background and gridlines
+  theme_classic() +
+  
+  # removing the legend
+  theme(
+    legend.position = "none"
+  )
+```
 
 
 
