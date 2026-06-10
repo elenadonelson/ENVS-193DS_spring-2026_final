@@ -1,0 +1,42 @@
+---
+title: "ENVS 193DS Spring 2026 Final"
+author: "Elena Donelson"
+date: today
+format:
+  pdf:
+    toc: true
+    toc-depth: 3
+editor: source
+---
+
+[Link to GitHub repository](https://github.com/elenadonelson/ENVS-193DS_spring-2026_final.git)
+
+# Setup
+
+```{r}
+#| message: false
+#| warning: false
+
+# loading packages
+library(tidyverse)
+library(janitor)
+library(gt)
+library(here)
+
+# reading in data
+est_data <- read_csv(here("data", "nest_data_final.csv"))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
