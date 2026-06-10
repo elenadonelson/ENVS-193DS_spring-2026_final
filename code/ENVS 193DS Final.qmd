@@ -27,6 +27,14 @@ library(here)
 est_data <- read_csv(here("data", "nest_data_final.csv"))
 ```
 
+# Problem 1. Research writing
+
+## a.
+
+In part 1, they likely used a logistic regression because they were testing whether distance to the water edge predicts the probability of American Avocet microhabitat use.
+
+In part 2, they likely used a chi-square test of independence because they were testing whether there is a relationship between bird species and habitat type, which are both categorical variables.
+
 
 
 
