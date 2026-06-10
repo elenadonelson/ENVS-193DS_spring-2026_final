@@ -24,8 +24,10 @@ library(gt)
 library(here)
 library(DHARMa)
 
-# reading in data
+# reading in nest data
 nests <- read_csv(here("data", "nest_data_final.csv"))
+# reading in coffee data
+coffee_data <- read_csv(here("data", "coffee_data 2.csv"))
 ```
 
 # Problem 1. Research writing
@@ -321,5 +323,49 @@ I received feedback from peers that my visualization was creative but could be i
 ## b.
 
 One analysis I could use is a simple linear regression. My research question focuses on whether the amount of sleep I get influences how much coffee I drink, so a linear regression would help test whether there is a relationship between these two variables. This analysis is appropriate because hours slept is a continuous predictor variable measured in hours, and coffee consumption is a continuous response variable measured in cups per day.
+
+## c.
+
+*Checking assumptions*
+
+```{r}
+# creating a linear model to test the relationship between sleep and coffee consumption
+coffee_lm <- lm(
+  coffee_cups ~ hours_slept,
+  data = coffee_data
+)
+
+# creating diagnostic plots to check assumptions
+plot(coffee_lm)
+```
+
+I checked the assumptions of linear regression using diagnostic plots. I examined the residuals for linearity, normality, equal variance, and influential observations. Based on the diagnostic plots, the assumptions appeared reasonable, so I proceeded with the linear regression analysis
+
+*Running the analysis*
+
+```{r}
+# running a simple linear regression
+summary(coffee_lm)
+```
+
+To test whether sleep influences coffee consumption, I used a simple linear regression with coffee cups as the response variable and hours slept as the predictor variable. The analysis showed a significant negative relationship between sleep and coffee consumption (F(1, 34) = 101.2, p < 0.001). As the number of hours slept increased, the number of cups of coffee consumed tended to decrease.
+
+*Effect size*
+
+```{r}
+# calculating R-squared as an effect size
+summary(coffee_lm)$r.squared
+```
+
+The effect size (R²) was 0.748. This means that about 74.8% of the variation in coffee consumption can be explained by the number of hours slept, indicating a strong relationship between these variables.
+
+
+
+
+
+
+
+
+
 
 
