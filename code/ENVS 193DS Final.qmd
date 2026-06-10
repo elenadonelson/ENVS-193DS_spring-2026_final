@@ -51,8 +51,47 @@ One additional variable that could influence the probability of American Avocet 
 
 ## a.
 
+```{r}
+# cleaning and wrangling nest data
+nests_clean <- nests %>%
+  
+  # selecting columns of interest
+  select(case_control, height_cm, ant_species) %>%
+  
+  # keeping only the three ant species needed for analysis
+  filter(ant_species %in% c("TP", "AB", "RRB")) %>%
+  
+  # creating a column with full scientific names
+  mutate(
+    ant_species_full = case_when(
+      ant_species == "TP" ~ "C. sjostedti",
+      ant_species == "AB" ~ "C. mimosae",
+      ant_species == "RRB" ~ "C. nigriceps"
+    )
+  ) %>%
+  
+  # reordering ant species levels
+  mutate(
+    ant_species_full = factor(
+      ant_species_full,
+      levels = c(
+        "C. sjostedti",
+        "C. mimosae",
+        "C. nigriceps"
+      )
+    )
+  )
 
+# displaying the structure of the cleaned data frame
+str(nests_clean)
 
+# displaying 10 random rows from the cleaned data frame
+slice_sample(nests_clean, n = 10)
+```
+
+## b. 
+
+In this data set, a value of 1 indicates that a bird nest was present in the tree, while a value of 0 indicates that no bird nest was present. Biologically, this means the response variable represents whether or not a tree was used as a nesting site by birds.
 
 
 
