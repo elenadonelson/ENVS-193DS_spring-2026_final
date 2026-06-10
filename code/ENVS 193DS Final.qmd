@@ -41,6 +41,9 @@ For part 1, the probability of American Avocet microhabitat use changed with dis
 
 For part 2, American Avocets, Forster's Terns, and Black-necked Stilts used habitats differently, suggesting that each species may have different habitat preferences within the San Francisco Bay.
 
+## c. 
+
+One additional variable that could influence the probability of American Avocet microhabitat use is water depth (cm), which could be measured at each bird observation location using a meter stick or depth gauge. Water depth likely influences habitat use because American Avocets are wading birds that feed in shallow water, and the paper found that they were commonly associated with wet bare ground and shorelines where water is typically shallower.
 
 
 
